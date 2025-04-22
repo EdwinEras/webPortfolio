@@ -18,7 +18,7 @@ const ContactIcon = ({
     <div>
         <Link  
         href={href}
-        style={{ '--hover-bg': color } as any}
+        style={{ '--hover-bg': color } as React.CSSProperties }
         className={`bg-white hover:[background-color:var(--hover-bg)] hover:text-white rounded-md 
         px-3 py-2 text-sm font-medium flex justify-center items-center gap-2`}
         >

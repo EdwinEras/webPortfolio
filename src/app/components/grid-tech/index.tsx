@@ -1,6 +1,7 @@
 'ue client';
 import React from 'react';
 import content from "../../content.json";
+import Image from 'next/image';
 
 const GridTech = () => {
     return(
@@ -12,7 +13,8 @@ const GridTech = () => {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-9 gap-4 bg-white rounded-lg shadow">
             {content.home.languages.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center p-2">
-                <img
+                <Image
+                    width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
                     className="h-20 object-contain"
@@ -28,7 +30,8 @@ const GridTech = () => {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-9 gap-4 bg-white rounded-lg shadow">
             {content.home.databases.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center p-2">
-                <img
+                <Image
+                    width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
                     className="h-20 object-contain"
@@ -44,7 +47,8 @@ const GridTech = () => {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-9 gap-4 bg-white rounded-lg shadow">
             {content.home.frameworks.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center p-2">
-                <img
+                <Image
+                    width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
                     className="h-20 object-contain"
@@ -60,7 +64,8 @@ const GridTech = () => {
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 lg:grid-cols-9 gap-4 bg-white rounded-lg shadow">
             {content.home.webtech.map((item, index) => (
                 <div key={index} className="flex flex-col items-center justify-center p-2">
-                <img
+                <Image
+                    width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
                     className="h-20 object-contain"

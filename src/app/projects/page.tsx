@@ -3,6 +3,16 @@ import { useEffect, useState } from "react";
 import ListProject from "../components/list_project";
 import axios from "axios";
 
+interface Repo {
+    id: number;
+    name: string;
+    html_url: string;
+    updated_at: string;
+    created_at: string;
+    language: string;
+    visibility: string;
+};
+
 export default function Page(){
     const [repos, setRepos] = useState([]);
 
@@ -32,7 +42,7 @@ export default function Page(){
             </div>
         </div>
         <div className="size-full my-10">
-            {repos.map((item:any) => (
+            {repos.map((item:Repo) => (
                 <ListProject key={item.id}
                     id={item.id}
                     html_url={item.html_url}
