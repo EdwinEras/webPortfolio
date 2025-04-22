@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -8,7 +10,7 @@ const Footer = () => {
           <div
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <img
+            <Image
               src="/edwineras-logo.png"
               className="h-10 rounded-full "
               alt="myphoto"
@@ -19,41 +21,41 @@ const Footer = () => {
           </div>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="/" className="hover:underline me-4 md:me-6">
+              <Link href="/" className="hover:underline me-4 md:me-6">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/certifications" className="hover:underline me-4 md:me-6">
+              <Link href="/certifications" className="hover:underline me-4 md:me-6">
                 Certifications
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/projects" className="hover:underline me-4 md:me-6">
+              <Link href="/projects" className="hover:underline me-4 md:me-6">
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/contact" className="hover:underline me-4 md:me-6">
+              <Link href="/contact" className="hover:underline me-4 md:me-6">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
             <li>
-              <a href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage" className="hover:underline me-4 md:me-6">
+              <Link href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage" className="hover:underline me-4 md:me-6">
                 Indeed
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/edwineras/ " className="hover:underline me-4 md:me-6">
+              <Link href="https://www.linkedin.com/in/edwineras/ " className="hover:underline me-4 md:me-6">
                 LinkedIn
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="https://github.com/EdwinEras" className="hover:underline me-4 md:me-6">
+              <Link href="https://github.com/EdwinEras" className="hover:underline me-4 md:me-6">
                 Github
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

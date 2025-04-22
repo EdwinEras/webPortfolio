@@ -5,8 +5,6 @@ import axios from "axios";
 
 export default function Page(){
     const [repos, setRepos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         (() => {

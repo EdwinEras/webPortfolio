@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { JSX } from "react";
 
@@ -17,7 +18,7 @@ const Card = ({
       transition duration-500 hover:scale-105 hover:shadow-xl h-full"
       onClick={() => setShowModal(true)}>
       {image && (
-        <img className="w-full" src={image} alt={title} />
+        <Image className="w-full" src={image} alt={title} />
       )}
       <div className="">
         <div className="font-bold text-center text-xl">{title}</div>
@@ -30,7 +31,7 @@ const Card = ({
         className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
       >
         <div className="max-w-3xl p-2 bg-white rounded-lg shadow-lg relative">
-          <img src={image} alt={title} className="w-full rounded" />
+          <Image src={image} alt={title} className="w-full rounded" />
         </div>
       </div>
     }

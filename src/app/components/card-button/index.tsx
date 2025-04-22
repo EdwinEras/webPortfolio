@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { JSX } from "react";
 
@@ -14,7 +15,7 @@ const CardButton = ({
 }): JSX.Element => {
   return (
     <div className="rounded overflow-hidden shadow-lg bg-white py-5 pl-5 justify-center items-center">
-      <img 
+      <Image 
         className="w-[30%] sm:h-[300px] sm:w-auto" 
         src={image} alt={title} height={280}
       />
