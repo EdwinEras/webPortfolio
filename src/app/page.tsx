@@ -35,7 +35,7 @@ export default function Home() {
       </div>
 
       <div className="min-w-0 flex-1">
-        <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight mb-10">
+        <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight my-10">
           Work Experience
         </h2>
       </div>

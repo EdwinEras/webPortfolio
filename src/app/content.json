@@ -22,28 +22,37 @@
         ],
         "workxp": [
             {
-              "company": "Tech Solutions Inc.",
-              "role": "Full Stack Developer",
-              "duration": "Jan 2022 – Present",
-              "description":
-                "Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Collaborated with designers and backend engineers to implement responsive features.",
-              "technologies": ["React", "Node.js", "Tailwind", "PostgreSQL"]
-            },
-            {
-              "company": "DataPro Analytics",
-              "role": "Junior Developer",
-              "duration": "Jun 2020 – Dec 2021",
-              "description":
-                "Assisted in developing dashboards for data visualization and automated reporting tools using Python and SQL.",
-              "technologies": ["Python", "SQL", "Django", "Chart.js"]
-            },
-            {
-                "company": "Tech Solutions Inc.",
-                "role": "Full Stack Developer",
-                "duration": "Jan 2022 – Present",
+                "company": "CREDIMATIC SA",
+                "role": "System Technician Programmer ",
+                "duration": "September/2023 - February/2024",
                 "description":
-                  "Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Collaborated with designers and backend engineers to implement responsive features.",
-                "technologies": ["React", "Node.js", "Tailwind", "PostgreSQL"]
+                    [
+                        "Led the migration of the companys financial databases and software functionalities to a new company infrastructure, ensuring security, data integrity, and seamless integration with existing systems.",
+                        "Created and updated comprehensive software manuals, ensuring clear communication of technical processes for daily operations, and enhancing user understanding of system functionalities."
+                    ],
+                "technologies": ["Cobol", "Java", "OracleSQL"]
+            },
+            {
+                "company": "SCHLUMBERGER SA",
+                "role": "Android Application Developer",
+                "duration": "February/2023 - July/2023",
+                "description":
+                    [
+                        "Implemented school webapp for over 504 Ecuadorian schools, focusing on responsive design, user-friendly navigation, and enhancing overall user experience for students, parents, and staff.",
+                        "Front-end and mobile development using web technologies to facilitate posting and managing of homework and online-classes, prioritizing network traffic and minimizing delays."
+                    ],
+                "technologies": ["Java", "Ruby on Rails", "Flutter", "MySQL"]
+            },
+            {
+                "company": "HANGAROA SA",
+                "role": "Full Stack Developer",
+                "duration": "February/2021 - April/2022",
+                "description":
+                    [
+                        "Content creation to provide digital marketing services and manage social media content for Ecuadorian companies, optimizing user experience and increasing online visibility for 19 local brands.",
+                        "Development and maintenance an end-to-end Website and Android application, utilizing both front-end and back-end technologies, ensuring a seamless user experience and robust functionality."
+                    ],
+                "technologies": ["React Native", "Ionic", "Bootstrap", "PostgreSQL"]
             }
         ],
         "languages": [
