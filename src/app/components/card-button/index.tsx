@@ -16,8 +16,10 @@ const CardButton = ({
   return (
     <div className="rounded overflow-hidden shadow-lg bg-white py-5 pl-5 justify-center items-center">
       <Image 
+        width={250} 
+        height={200}
         className="w-[30%] sm:h-[300px] sm:w-auto" 
-        src={image} alt={title} height={280}
+        src={image} alt={title}
       />
       <div className="w-1/2 px-5 mr-2 mb-2">
         <div className="w-[60%] font-bold text-xl py-2">{title}</div>

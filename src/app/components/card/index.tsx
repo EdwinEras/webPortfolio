@@ -18,7 +18,9 @@ const Card = ({
       transition duration-500 hover:scale-105 hover:shadow-xl h-full"
       onClick={() => setShowModal(true)}>
       {image && (
-        <Image className="w-full" src={image} alt={title} />
+        <Image 
+        width={250} height={200}
+        className="w-full" src={image} alt={title} />
       )}
       <div className="">
         <div className="font-bold text-center text-xl">{title}</div>

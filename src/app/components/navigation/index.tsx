@@ -12,6 +12,7 @@ import {
   Bars3Icon, 
   XMarkIcon 
 } from '@heroicons/react/24/outline'
+import Image from 'next/image';
 import Link from 'next/link'
 import { usePathname } from 'next/navigation';
 
@@ -45,7 +46,9 @@ const Navigation = () => {
 
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex items-center">
-              <img
+              <Image
+                width={50} 
+                height={40}
                 alt="Your Company"
                 src="/edwineras-logo.png"
                 className="h-10 w-auto"

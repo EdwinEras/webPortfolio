@@ -11,8 +11,10 @@ const Footer = () => {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <Image
+              width={50} 
+              height={40}
               src="/edwineras-logo.png"
-              className="h-10 rounded-full "
+              className="h-15 rounded-full "
               alt="myphoto"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
