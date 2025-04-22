@@ -1,0 +1,120 @@
+{
+    "home":{
+        "studies": [
+            { 
+              "title": "Computer Science", 
+              "description": "description", 
+              "image": "/computer_science.jpg",
+              "hashtags": ["AI / ML", "Operative Systems", "Algorithm Analysis", "Software Architecture"]
+            },
+            { 
+              "title": "Database Application Developer", 
+              "description": "description", 
+              "image": "/database_developer.jpg",
+              "hashtags": ["OLTP / OLAP", "Database Design", "Query Optimization", "Data Warehousing"]
+            },
+            {
+              "title": "Cybersecurity & Thread Management", 
+              "description": "description", 
+              "image": "/cybersecurity.jpg",
+              "hashtags": ["Network Security", "Risk Assestment", "Security Auditing", "Log Analysis"]
+            }
+        ],
+        "workxp": [
+            {
+              "company": "Tech Solutions Inc.",
+              "role": "Full Stack Developer",
+              "duration": "Jan 2022 – Present",
+              "description":
+                "Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Collaborated with designers and backend engineers to implement responsive features.",
+              "technologies": ["React", "Node.js", "Tailwind", "PostgreSQL"]
+            },
+            {
+              "company": "DataPro Analytics",
+              "role": "Junior Developer",
+              "duration": "Jun 2020 – Dec 2021",
+              "description":
+                "Assisted in developing dashboards for data visualization and automated reporting tools using Python and SQL.",
+              "technologies": ["Python", "SQL", "Django", "Chart.js"]
+            },
+            {
+                "company": "Tech Solutions Inc.",
+                "role": "Full Stack Developer",
+                "duration": "Jan 2022 – Present",
+                "description":
+                  "Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Collaborated with designers and backend engineers to implement responsive features.",
+                "technologies": ["React", "Node.js", "Tailwind", "PostgreSQL"]
+            }
+        ],
+        "languages": [
+            {"name":"C++","img":"/tech/c1_logo.png"},
+            {"name":"Dart","img":"/tech/dart.png"},
+            {"name":"JavaScript", "img":"/tech/javascript.png"},
+            {"name":"C#","img":"/tech/c2_logo.png"},
+            {"name":"PHP","img":"/tech/php.png"},
+            {"name":"Ruby","img":"/tech/ruby.png"},
+            {"name":"Python","img":"/tech/python.png"},
+            {"name":"Java","img":"/tech/java.png"},
+            {"name":"TypeScript","img":"/tech/typescript.png"}
+        ],
+        "databases": [
+            {"name":"OracleDB","img":"/tech/oracle.png"},
+            {"name":"PostgreSQL","img":"/tech/postgresql.png"},
+            {"name":"SQL Server","img":"/tech/sqlserver.png"},
+            {"name":"SQL Lite","img":"/tech/sqllite.png"},
+            {"name":"MongoDB","img":"/tech/mongodb.png"},
+            {"name":"MySQL","img":"/tech/mysql.png"},
+            {"name":"Firebase","img":"/tech/firebase.png"}
+        ],
+        "frameworks": [
+            {"name":"Flutter","img":"/tech/flutter.png"},
+            {"name":"NodeJS","img":"/tech/node.png"},
+            {"name":"ReactJS","img":"/tech/reactjs.png"},
+            {"name":"Angular","img":"/tech/angular.png"},
+            {"name":"Ruby on Rails","img":"/tech/rubyrails.png"},
+            {"name":"Bootstrap","img":"/tech/bootstrap.png"},
+            {"name":"Django","img":"/tech/django.png"},
+            {"name":"Tailwind","img":"/tech/tailwind.png"},
+            {"name":"Spring","img":"/tech/spring.png"}
+        ],
+        "webtech": [
+            {"name":"Postman","img":"/tech/postman.png"},
+            {"name":"Css","img":"/tech/css.png"},
+            {"name":"Docker","img":"/tech/docker.png"},
+            {"name":"GitLab","img":"/tech/gitlab.png"},
+            {"name":"Redux","img":"/tech/redux.png"},
+            {"name":"Git","img":"/tech/git.png"},
+            {"name":"Html","img":"/tech/html.png"},
+            {"name":"GitHub","img":"/github.png"}
+        ]
+    },
+    "certificates":[
+        {
+            "image": "/certificates/academic_research.png", "title": "Academic Research - 08/2024"
+        },
+        {
+            "image": "/certificates/cisco.png", "title": "Cisco Network Introduction - 02/2021"
+        },
+        {
+            "image": "/certificates/java_foundations.png", "title": "Java Foundations - 01/2020"
+        },
+        {
+            "image": "/certificates/linux_bash.png", "title": "Linux Bash Shell Scripting - 12/2023"
+        },
+        {
+            "image": "/certificates/president_honour.png", "title": "President Honour - Fall 2024"
+        },
+        {
+            "image": "/certificates/python_essential.png", "title": "Python Essential - 10/2022"
+        },
+        {
+            "image": "/certificates/r_statistics.png", "title": "R for Research - 01/2022"
+        }
+    ],
+    "contacts": [
+        {"name":"Phone", "image":"/phone.png", "color":"#63F056", "href":"sms:+14378290725"},
+        {"name":"LinkedIn", "image":"/linkedin.png", "color":"#007CB8", "href":"https://www.linkedin.com/in/edwineras/"},
+        {"name":"GitHub", "image":"/github.png", "color":"#000000", "href":"https://github.com/EdwinEras"},
+        {"name":"Research Gate", "image":"/researchgate.png", "color":"#848484", "href":"https://www.researchgate.net/profile/Edwin-Eras-Zamora?ev=hdr_xprf"}
+    ]
+}
