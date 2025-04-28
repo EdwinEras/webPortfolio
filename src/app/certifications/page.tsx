@@ -12,7 +12,7 @@ export default function Page(){
             </div>
         </div>
         <div className="size-full my-10">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
                 {content.certificates.map((item, index) => (
                     <Card key={index}
                         title={item.title}

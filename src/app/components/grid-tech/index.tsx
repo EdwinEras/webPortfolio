@@ -17,8 +17,9 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-20 object-contain"
-                />
+                    className="h-20 object-contain px-1 
+                    transform transition-transform duration-700 hover:rotate-[360deg]"
+                    />
                 <p>{item.name}</p>
                 </div>
             ))}
@@ -34,7 +35,8 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-20 object-contain"
+                    className="h-20 object-contain px-1 
+                    transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
                 <p>{item.name}</p>
             </div>
@@ -51,7 +53,8 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-20 object-contain"
+                    className="h-20 object-contain px-1 
+                    transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
                 <p>{item.name}</p>
                 </div>
@@ -68,7 +71,8 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-20 object-contain"
+                    className="h-20 object-contain px-1 
+                    transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
                 <p>{item.name}</p>
                 </div>

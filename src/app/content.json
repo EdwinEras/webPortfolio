@@ -3,19 +3,19 @@
         "studies": [
             { 
               "title": "Computer Science", 
-              "description": "description", 
+              "description": "Computer science is essential today because it drives innovation across every industry, from healthcare and education to finance and entertainment. It helps solve complex problems, automates tasks, and connects people globally through technology. As our world becomes more digital, computer science empowers us to create smarter systems, protect information, and build a better future through continuous technological advancement.", 
               "image": "/computer_science.jpg",
               "hashtags": ["AI / ML", "Operative Systems", "Algorithm Analysis", "Software Architecture"]
             },
             { 
               "title": "Database Application Developer", 
-              "description": "description", 
+              "description": "Database developers are crucial today because they design, build, and manage the systems that store and organize the world’s data. In a time when businesses rely heavily on data-driven decisions, secure storage, and fast access to information, skilled database developers ensure that data is reliable, optimized, and protected. Their work supports everything from e-commerce and banking to healthcare and smart technologies, making them key players in today's digital economy.", 
               "image": "/database_developer.jpg",
               "hashtags": ["OLTP / OLAP", "Database Design", "Query Optimization", "Data Warehousing"]
             },
             {
               "title": "Cybersecurity & Thread Management", 
-              "description": "description", 
+              "description": "Cybersecurity is vital today because our personal, financial, and business information is constantly at risk in the digital world. As technology grows, so do cyber threats like hacking, identity theft, and data breaches. Cybersecurity protects sensitive information, ensures privacy, and keeps systems running safely, making it essential for individuals, businesses, and governments in maintaining trust and security online.", 
               "image": "/cybersecurity.jpg",
               "hashtags": ["Network Security", "Risk Assestment", "Security Auditing", "Log Analysis"]
             }
@@ -28,7 +28,8 @@
                 "description":
                     [
                         "Led the migration of the companys financial databases and software functionalities to a new company infrastructure, ensuring security, data integrity, and seamless integration with existing systems.",
-                        "Created and updated comprehensive software manuals, ensuring clear communication of technical processes for daily operations, and enhancing user understanding of system functionalities."
+                        "Created and updated comprehensive software manuals, ensuring clear communication of technical processes for daily operations, and enhancing user understanding of system functionalities.",
+                        "Designed complex pipelines using Linux bash script commands to make the compilation and build process faster, optimizing the integration of new software to the system."
                     ],
                 "technologies": ["Cobol", "Java", "OracleSQL"]
             },
@@ -39,7 +40,8 @@
                 "description":
                     [
                         "Implemented school webapp for over 504 Ecuadorian schools, focusing on responsive design, user-friendly navigation, and enhancing overall user experience for students, parents, and staff.",
-                        "Front-end and mobile development using web technologies to facilitate posting and managing of homework and online-classes, prioritizing network traffic and minimizing delays."
+                        "Front-end and mobile development using web technologies to facilitate posting and managing of homework and online-classes, prioritizing network traffic and minimizing delays.",
+                        "Used Canva LMS REST API with AJAX to create single page Dashboards for students and professors without reloading the pages, ensuring a fast update and smother experience."
                     ],
                 "technologies": ["Java", "Ruby on Rails", "Flutter", "MySQL"]
             },
@@ -50,7 +52,8 @@
                 "description":
                     [
                         "Content creation to provide digital marketing services and manage social media content for Ecuadorian companies, optimizing user experience and increasing online visibility for 19 local brands.",
-                        "Development and maintenance an end-to-end Website and Android application, utilizing both front-end and back-end technologies, ensuring a seamless user experience and robust functionality."
+                        "Development and maintenance an end-to-end Website and Android application, utilizing both front-end and back-end technologies, ensuring a seamless user experience and robust functionality.",
+                        "Used Paymentez API for online payments, stablishing a secure connection and giving feedback of each stage of the payment until the transaction was completed."
                     ],
                 "technologies": ["React Native", "Ionic", "Bootstrap", "PostgreSQL"]
             }
@@ -118,6 +121,12 @@
         },
         {
             "image": "/certificates/r_statistics.png", "title": "R for Research - 01/2022"
+        },
+        {
+            "image": "/certificates/computer_science.png", "title": "Bachelor of Computer Science - 10/2023"
+        },
+        {
+            "image": "/certificates/hackathon_seneca.png", "title": "Seneca Hackathon - 03/2025"
         }
     ],
     "contacts": [

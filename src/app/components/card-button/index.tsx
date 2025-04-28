@@ -25,7 +25,6 @@ const CardButton = ({
         <div className="w-[60%] font-bold text-xl py-2">{title}</div>
         <p className="w-[60%]">
           {description}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt fuga, hic nemo ut voluptates consequatur corrupti eaque optio, aliquam nulla dolores expedita maxime atque ratione sit cupiditate odio saepe facilis.
         </p>
 
         <div className="w-[60%] flex flex-wrap gap-2 mt-4">

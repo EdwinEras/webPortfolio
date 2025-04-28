@@ -7,7 +7,8 @@ const CardXP = () => {
       {content.home.workxp.map((exp, index) => (
         <div
           key={index}
-          className="bg-white p-6 rounded-xl shadow-md transition hover:shadow-lg"
+          className="bg-white p-6 rounded-xl shadow-md
+          transition duration-500 hover:scale-105 hover:shadow-xl"
         >
           <div className="flex justify-between items-center mb-2">
             <h3 className="text-xl font-semibold">{exp.role}</h3>

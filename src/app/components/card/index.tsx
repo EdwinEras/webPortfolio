@@ -32,8 +32,11 @@ const Card = ({
       <div onClick={() => setShowModal(false)}
         className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
       >
-        <div className="max-w-3xl p-2 bg-white rounded-lg shadow-lg relative">
-          <Image src={image} alt={title} className="w-full rounded" />
+        <div className="max-w-6xl p-2 bg-white rounded-lg shadow-lg relative">
+          <Image 
+            width={800} height={800}
+            src={image} alt={title} className="w-full rounded" 
+          />
         </div>
       </div>
     }
