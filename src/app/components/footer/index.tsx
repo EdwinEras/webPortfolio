@@ -4,7 +4,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-white rounded-lg shadow dark:bg-gray-800 m-4">
+    <footer className="bg-gray-800 rounded-lg shadow m-4">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div
@@ -17,7 +17,7 @@ const Footer = () => {
               className="h-15 rounded-full "
               alt="myphoto"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
               Edwin Eras
             </span>
           </div>
