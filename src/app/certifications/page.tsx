@@ -2,6 +2,9 @@ import Card from "../components/card";
 import content from "../content.json";
 
 export default function Page(){
+    const certificates = [...content.certificates]
+    certificates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
     return (
     <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <div className="lg:flex lg:items-center lg:justify-between">
@@ -13,7 +16,7 @@ export default function Page(){
         </div>
         <div className="size-full my-10">
             <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
-                {content.certificates.map((item, index) => (
+                {certificates.map((item, index) => (
                     <Card key={index}
                         title={item.title}
                         image={item.image}

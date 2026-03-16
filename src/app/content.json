@@ -59,74 +59,73 @@
             }
         ],
         "languages": [
-            {"name":"C++","img":"/tech/c1_logo.png"},
-            {"name":"Dart","img":"/tech/dart.png"},
-            {"name":"JavaScript", "img":"/tech/javascript.png"},
-            {"name":"C#","img":"/tech/c2_logo.png"},
-            {"name":"PHP","img":"/tech/php.png"},
-            {"name":"Ruby","img":"/tech/ruby.png"},
             {"name":"Python","img":"/tech/python.png"},
             {"name":"Java","img":"/tech/java.png"},
-            {"name":"TypeScript","img":"/tech/typescript.png"}
+            {"name":"JavaScript", "img":"/tech/javascript.png"},
+            {"name":"TypeScript","img":"/tech/typescript.png"},
+            {"name":"C++","img":"/tech/c1_logo.png"},
+            {"name":"Dart","img":"/tech/dart.png"}
         ],
         "databases": [
             {"name":"OracleDB","img":"/tech/oracle.png"},
             {"name":"PostgreSQL","img":"/tech/postgresql.png"},
             {"name":"SQL Server","img":"/tech/sqlserver.png"},
-            {"name":"SQL Lite","img":"/tech/sqllite.png"},
-            {"name":"MongoDB","img":"/tech/mongodb.png"},
             {"name":"MySQL","img":"/tech/mysql.png"},
+            {"name":"MongoDB","img":"/tech/mongodb.png"},
             {"name":"Firebase","img":"/tech/firebase.png"}
         ],
         "frameworks": [
-            {"name":"Flutter","img":"/tech/flutter.png"},
-            {"name":"NodeJS","img":"/tech/node.png"},
             {"name":"ReactJS","img":"/tech/reactjs.png"},
             {"name":"Angular","img":"/tech/angular.png"},
-            {"name":"Ruby on Rails","img":"/tech/rubyrails.png"},
-            {"name":"Bootstrap","img":"/tech/bootstrap.png"},
+            {"name":"Spring","img":"/tech/spring.png"},
+            {"name":"NodeJS","img":"/tech/node.png"},
             {"name":"Django","img":"/tech/django.png"},
-            {"name":"Tailwind","img":"/tech/tailwind.png"},
-            {"name":"Spring","img":"/tech/spring.png"}
+            {"name":"Flutter","img":"/tech/flutter.png"}
         ],
         "webtech": [
-            {"name":"Postman","img":"/tech/postman.png"},
-            {"name":"Css","img":"/tech/css.png"},
-            {"name":"Docker","img":"/tech/docker.png"},
-            {"name":"GitLab","img":"/tech/gitlab.png"},
-            {"name":"Redux","img":"/tech/redux.png"},
             {"name":"Git","img":"/tech/git.png"},
+            {"name":"Postman","img":"/tech/postman.png"},
+            {"name":"Docker","img":"/tech/docker.png"},
             {"name":"Html","img":"/tech/html.png"},
-            {"name":"GitHub","img":"/github.png"}
+            {"name":"CSS","img":"/tech/css.png"}
         ]
     },
     "certificates":[
         {
-            "image": "/certificates/academic_research.png", "title": "Academic Research - 08/2024"
+            "image": "/certificates/comptia_sec+.png", "title": "CompTIA Security+", "date": "22-02-2026"
         },
         {
-            "image": "/certificates/cisco.png", "title": "Cisco Network Introduction - 02/2021"
+            "image": "/certificates/cisco_cybersecurity.png", "title": "Seneca Database Certificate", "date": "22-05-2025"
         },
         {
-            "image": "/certificates/java_foundations.png", "title": "Java Foundations - 01/2020"
+            "image": "/certificates/database_certificate.png", "title": "Seneca Database Certificate", "date": "01-04-2025"
         },
         {
-            "image": "/certificates/linux_bash.png", "title": "Linux Bash Shell Scripting - 12/2023"
+            "image": "/certificates/academic_research.png", "title": "Academic Research", "date": "01-08-2024"
         },
         {
-            "image": "/certificates/president_honour.png", "title": "President Honour - Fall 2024"
+            "image": "/certificates/cisco.png", "title": "Cisco Network Introduction", "date": "01-02-2021"
         },
         {
-            "image": "/certificates/python_essential.png", "title": "Python Essential - 10/2022"
+            "image": "/certificates/java_foundations.png", "title": "Java Foundations", "date": "01-01-2020"
         },
         {
-            "image": "/certificates/r_statistics.png", "title": "R for Research - 01/2022"
+            "image": "/certificates/linux_bash.png", "title": "Linux Bash Shell Scripting", "date": "01-12-2023"
         },
         {
-            "image": "/certificates/computer_science.png", "title": "Bachelor of Computer Science - 10/2023"
+            "image": "/certificates/president_honour_dad.png", "title": "President Honour DAD", "date": "01-12-2024"
         },
         {
-            "image": "/certificates/hackathon_seneca.png", "title": "Seneca Hackathon - 03/2025"
+            "image": "/certificates/president_honour_cyt.png", "title": "President Honour CYT", "date": "01-08-2025"
+        },
+        {
+            "image": "/certificates/r_statistics.png", "title": "R for Research", "date": "01-01-2022"
+        },
+        {
+            "image": "/certificates/computer_science.png", "title": "Bachelor of Computer Science", "date": "01-10-2023"
+        },
+        {
+            "image": "/certificates/hackathon_seneca.png", "title": "Seneca Hackathon", "date": "01-03-2025"
         }
     ],
     "contacts": [
