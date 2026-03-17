@@ -30,20 +30,18 @@ export default function Home() {
           Education and Studies
         </h2>
       </div>
-      <div className="size-full">
-        <Carousel />
-      </div>
+      <Carousel />
 
-      <div className="min-w-0 flex-1">
+      {/* <div className="min-w-0 flex-1">
         <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight my-10">
           Work Experience
         </h2>
       </div>
-      <CardXP />
+      <CardXP /> */}
 
       <div className="min-w-0 flex-1">
         <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight my-10">
-          Languages and Tech Skills
+          Technical Skills
         </h2>
       </div>
       <GridTech />

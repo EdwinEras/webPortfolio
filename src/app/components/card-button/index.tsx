@@ -1,33 +1,43 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
 import { JSX } from "react";
 
-const CardButton = ({ 
-    title, 
-    description, 
-    image,
-    hashtags, 
+const CardButton = ({
+  title,
+  description,
+  image,
+  hashtags,
 }: {
-    title: string,
-    description: string,
-    image: string,
-    hashtags: string[]
+  title: string;
+  description: string;
+  image: string;
+  hashtags: string[];
 }): JSX.Element => {
   return (
-    <div className="rounded overflow-hidden shadow-lg bg-white py-5 pl-5 justify-center items-center">
-      <Image 
-        width={250} 
-        height={200}
-        className="w-[30%] sm:h-[300px] sm:w-auto" 
-        src={image} alt={title}
-      />
-      <div className="w-1/2 px-5 mr-2 mb-2">
-        <div className="w-[60%] font-bold text-xl py-2">{title}</div>
-        <p className="w-[60%]">
+    <div className="rounded shadow-lg bg-white p-6 flex flex-col md:flex-row gap-3 w-full">
+
+      {/* Image */}
+      <div className="flex-shrink-0">
+        <Image
+          src={image}
+          alt={title}
+          width={300}
+          height={220}
+          className="w-full md:w-[280px] h-auto object-contain"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col flex-1">
+
+        <h3 className="font-bold text-xl mb-2">
+          {title}
+        </h3>
+
+        <p className="text-gray-700 mb-4">
           {description}
         </p>
 
-        <div className="w-[60%] flex flex-wrap gap-2 mt-4">
+        <div className="flex flex-wrap gap-2">
           {hashtags.map((item, index) => (
             <span
               key={index}
@@ -38,7 +48,9 @@ const CardButton = ({
             </span>
           ))}
         </div>
+
       </div>
+
     </div>
   );
 };

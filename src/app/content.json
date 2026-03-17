@@ -63,24 +63,21 @@
             {"name":"Java","img":"/tech/java.png"},
             {"name":"JavaScript", "img":"/tech/javascript.png"},
             {"name":"TypeScript","img":"/tech/typescript.png"},
-            {"name":"C++","img":"/tech/c1_logo.png"},
-            {"name":"Dart","img":"/tech/dart.png"}
+            {"name":"C++","img":"/tech/c1_logo.png"}
         ],
         "databases": [
             {"name":"OracleDB","img":"/tech/oracle.png"},
             {"name":"PostgreSQL","img":"/tech/postgresql.png"},
             {"name":"SQL Server","img":"/tech/sqlserver.png"},
             {"name":"MySQL","img":"/tech/mysql.png"},
-            {"name":"MongoDB","img":"/tech/mongodb.png"},
-            {"name":"Firebase","img":"/tech/firebase.png"}
+            {"name":"MongoDB","img":"/tech/mongodb.png"}
         ],
         "frameworks": [
             {"name":"ReactJS","img":"/tech/reactjs.png"},
             {"name":"Angular","img":"/tech/angular.png"},
             {"name":"Spring","img":"/tech/spring.png"},
             {"name":"NodeJS","img":"/tech/node.png"},
-            {"name":"Django","img":"/tech/django.png"},
-            {"name":"Flutter","img":"/tech/flutter.png"}
+            {"name":"Django","img":"/tech/django.png"}
         ],
         "webtech": [
             {"name":"Git","img":"/tech/git.png"},

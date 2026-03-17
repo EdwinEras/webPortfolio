@@ -17,10 +17,10 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-10 object-contain px-1 
+                    className="h-12 object-contain px-1 
                     transform transition-transform duration-700 hover:rotate-[360deg]"
                     />
-                <p className="text-sm sm:text-base">{item.name}</p>
+                <p>{item.name}</p>
                 </div>
             ))}
             </div>
@@ -35,10 +35,10 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-10 object-contain px-1 
+                    className="h-12 object-contain px-1 
                     transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
-                <p className="text-sm sm:text-base">{item.name}</p>
+                <p>{item.name}</p>
             </div>
             ))}
             </div>
@@ -53,10 +53,10 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-10 object-contain px-1 
+                    className="h-12 object-contain px-1 
                     transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
-                <p className="text-sm sm:text-base">{item.name}</p>
+                <p>{item.name}</p>
                 </div>
             ))}
             </div>
@@ -71,10 +71,10 @@ const GridTech = () => {
                     width={100} height={100}
                     src={item.img}
                     alt={`language-${index}`}
-                    className="h-10 object-contain px-1 
+                    className="h-12 object-contain px-1 
                     transform transition-transform duration-700 hover:rotate-[360deg]"
                 />
-                <p className="text-sm sm:text-base">{item.name}</p>
+                <p>{item.name}</p>
                 </div>
             ))}
             </div>
