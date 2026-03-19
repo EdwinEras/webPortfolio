@@ -1,6 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import ListProject from "../components/list_project";
+import PageTransition from "../components/page-transition";
 import axios from "axios";
 
 interface Repo {
@@ -33,15 +35,26 @@ export default function Page(){
     }, []);
 
     return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <div className="lg:flex lg:items-center lg:justify-between">
+    <PageTransition>
+      <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <motion.div
+          initial={{ opacity: 0, y: 22 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, delay: 0.06 }}
+          className="lg:flex lg:items-center lg:justify-between"
+        >
             <div className="min-w-0 flex-1">
                 <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight">
                     Projects page
                 </h2>
             </div>
-        </div>
-        <div className="size-full my-10">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 28 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.14 }}
+          className="size-full my-10"
+        >
             {repos.map((item:Repo) => (
                 <ListProject key={item.id}
                     id={item.id}
@@ -53,6 +66,7 @@ export default function Page(){
                     visibility={item.visibility}
                 />
             ))}
-        </div>
-    </div>
+        </motion.div>
+      </div>
+    </PageTransition>
 )};

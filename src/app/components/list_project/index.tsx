@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { JSX } from "react";
@@ -20,31 +21,35 @@ const ListProject = ({
         visibility: string
     }): JSX.Element => {
     return (
-      <div className="rounded overflow-hidden shadow-lg bg-white px-10 py-2">
+      <div className="overflow-hidden rounded border border-transparent bg-white px-10 my-2 shadow-lg dark:border-violet-800/60 dark:bg-violet-950/85 dark:text-gray-200">
         <ul role="list" className="divide-y divide-solid">
             <li key={id} className="flex justify-between gap-x-6 py-5">
               <div className="flex min-w-0 gap-x-4">
-                <img alt="github_avatar"
-                src={"https://avatars.githubusercontent.com/u/59517455?v=4"} 
-                className="size-12 flex-none rounded-full bg-gray-50" />
+                <Image
+                  alt="github avatar"
+                  src="https://avatars.githubusercontent.com/u/59517455?v=4"
+                  width={48}
+                  height={48}
+                  className="size-12 flex-none rounded-full bg-gray-50 dark:bg-violet-900/80"
+                />
                 <div className="min-w-0 flex-auto">
-                  <p className="text-sm/6 font-semibold text-gray-900">{pname}</p>
-                  <p className="text-sm/6 text-gray-900">Language {language}</p>
-                  <Link className="mt-1 truncate text-xs/5 text-gray-500" href={html_url}>
-                    <button className="rounded-full bg-gray-800">
+                  <p className="text-sm/6 font-semibold text-gray-900 dark:text-gray-100">{pname}</p>
+                  <p className="text-sm/6 text-gray-900 dark:text-gray-200">Language {language}</p>
+                  <Link className="mt-1 truncate text-xs/5 text-gray-500 dark:text-gray-400" href={html_url}>
+                    <button className="rounded-full bg-gray-800 dark:bg-violet-800">
                       <p className="text-white px-2 py-2">Open Repository</p>
                     </button>
                   </Link>
                 </div>
               </div>
               <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p className="mt-1 text-xs/5 text-gray-500">
+                <p className="mt-1 text-xs/5 text-gray-500 dark:text-gray-400">
                   Created at <time dateTime={created_at}>{created_at.split("T")[0]}</time>
                 </p>
-                <p className="mt-1 text-xs/5 text-gray-500">
+                <p className="mt-1 text-xs/5 text-gray-500 dark:text-gray-400">
                   Updated at <time dateTime={updated_at}>{updated_at.split("T")[0]}</time>
                 </p>
-                <p className="mt-1 text-xs/5 text-gray-500">
+                <p className="mt-1 text-xs/5 text-gray-500 dark:text-gray-400">
                   Visibility {visibility}
                 </p>
               </div>

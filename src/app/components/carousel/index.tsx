@@ -17,14 +17,14 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative size-full px-3 mt-10 rounded-full">
+    <div className="relative size-full mt-10 rounded-full">
       <div className="overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {items.map((item, i) => (
-            <div key={i} className="min-w-full px-3">
+            <div key={i} className="min-w-full">
               <CardButton
                 title={item.title}
                 description={item.description}
@@ -40,7 +40,7 @@ const Carousel = () => {
       <button
         onClick={handlePrev}
         aria-label="Previous slide"
-        className="absolute left-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200"
+        className="absolute -left-6 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow hover:bg-gray-200 dark:bg-violet-900/90 dark:text-gray-100 dark:hover:bg-violet-800"
       >
         <ChevronLeft />
       </button>
@@ -48,7 +48,7 @@ const Carousel = () => {
       <button
         onClick={handleNext}
         aria-label="Next slide"
-        className="absolute right-0 top-1/2 -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200"
+        className="absolute -right-6 top-1/2 -translate-y-1/2 rounded-full bg-white p-3 shadow hover:bg-gray-200 dark:bg-violet-900/90 dark:text-gray-100 dark:hover:bg-violet-800"
       >
         <ChevronRight />
       </button>

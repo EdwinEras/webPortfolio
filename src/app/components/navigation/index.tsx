@@ -1,4 +1,5 @@
 'use client'
+import { motion } from "framer-motion";
 import { 
   Disclosure, 
   DisclosureButton, 
@@ -31,6 +32,11 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: -18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+    >
     <Disclosure as="nav" className="bg-gray-800">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 items-center justify-between">
@@ -58,15 +64,21 @@ const Navigation = () => {
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   return(
-                  <Link
+                  <motion.div
                     key={item.name}
-                    href={item.href}
-                    className={`rounded-md px-3 py-2 text-sm font-medium ${
-                      isActive ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                  }`}>
-                    {item.name}
-                  </Link>)
+                    whileHover={{ y: -2, scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ duration: 0.18 }}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                        isActive ? 'bg-gray-900 text-white'
+                          : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    }`}>
+                      {item.name}
+                    </Link>
+                  </motion.div>)
                   })}
               </div>
             </div>
@@ -78,20 +90,22 @@ const Navigation = () => {
                 <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Open user menu</span>
-                  <img
+                  <Image
                     alt="myphoto"
                     src="/myphoto.jpg"
+                    width={40}
+                    height={40}
                     className="size-10 rounded-full"
                   />
                 </MenuButton>
               </div>
               <MenuItems
                 transition
-                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 text-gray-900 shadow-lg ring-1 ring-black/5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in dark:bg-violet-950/95 dark:text-gray-200 dark:ring-violet-800/60"
               >
                 <MenuItem>
                   <Link href="contact"
-                    className="block px-4 py-2 text-sm hover:bg-gray-300"
+                    className="block px-4 py-2 text-sm hover:bg-gray-300 dark:hover:bg-violet-800"
                   >
                     Contact me
                   </Link>
@@ -100,7 +114,7 @@ const Navigation = () => {
                   <a 
                     href="/EdwinEras_Resume.pdf" 
                     download 
-                    className="block px-4 py-2 text-sm hover:bg-gray-300"
+                    className="block px-4 py-2 text-sm hover:bg-gray-300 dark:hover:bg-violet-800"
                   >
                     Download CV
                   </a>
@@ -130,6 +144,7 @@ const Navigation = () => {
         </div>
       </DisclosurePanel>
     </Disclosure>
+    </motion.div>
   )
 }
 

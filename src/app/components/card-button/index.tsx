@@ -13,9 +13,7 @@ const CardButton = ({
   hashtags: string[];
 }): JSX.Element => {
   return (
-    <div className="rounded shadow-lg bg-white p-6 flex flex-col md:flex-row gap-3 w-full">
-
-      {/* Image */}
+    <div className="rounded border border-transparent bg-white p-6 shadow-lg flex flex-col md:flex-row gap-3 w-full dark:border-violet-800/60 dark:bg-violet-950/80 dark:text-gray-100">
       <div className="flex-shrink-0">
         <Image
           src={image}
@@ -25,15 +23,13 @@ const CardButton = ({
           className="w-full md:w-[280px] h-auto object-contain"
         />
       </div>
-
-      {/* Content */}
       <div className="flex flex-col flex-1">
 
         <h3 className="font-bold text-xl mb-2">
           {title}
         </h3>
 
-        <p className="text-gray-700 mb-4">
+        <p className="text-gray-700 mb-4 dark:text-gray-300">
           {description}
         </p>
 
@@ -41,8 +37,7 @@ const CardButton = ({
           {hashtags.map((item, index) => (
             <span
               key={index}
-              className="bg-gray-300 rounded-full px-3 py-1 text-sm 
-              hover:bg-gray-600 hover:text-white font-semibold text-black"
+              className="rounded-full bg-gray-300 px-3 py-1 text-sm font-semibold text-black hover:bg-gray-600 hover:text-white dark:bg-violet-900/80 dark:text-gray-200 dark:hover:bg-violet-700"
             >
               #{item}
             </span>

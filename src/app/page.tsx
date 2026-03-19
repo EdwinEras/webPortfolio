@@ -1,50 +1,71 @@
-import CardXP from "./components/card-xp";
+"use client";
+
+import { motion } from "framer-motion";
 import Carousel from "./components/carousel";
 import GridTech from "./components/grid-tech";
+import PageTransition from "./components/page-transition";
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <div className="lg:flex lg:items-center lg:justify-between">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight pb-10">
+    <PageTransition>
+      <div className="min-h-screen px-6 sm:px-12 lg:px-24 py-16 space-y-20">
+
+        {/* HERO SECTION */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          className="text-center max-w-3xl mx-auto"
+        >
+          <h1 className="relative text-3xl sm:text-5xl font-bold tracking-tight mb-6
+        bg-gradient-to-r from-black via-blue-400 to-blue-600 pb-5
+        dark:bg-gradient-to-r dark:from-white dark:via-purple-400 dark:to-purple-600 pb-5
+        bg-clip-text text-transparent animate-gradient text-center">
             Edwin Eras
+            <br/>Software Engineer
+            <span className="absolute inset-0 blur-2xl opacity-30 
+          bg-gradient-to-r from-white via-blue-400 to-blue-600 
+          dark:bg-gradient-to-r dark:from-white dark:via-purple-400 dark:to-purple-600 
+          -z-10 rounded-lg"></span>
+          </h1>
+
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+            Computer Science graduate with postgraduate certifications in Databases 
+            and Cybersecurity. Over 5 years of experience as a full-stack and database 
+            developer, with a strong passion for problem solving, research, and helping others.
+          </p>
+        </motion.div>
+
+        <motion.section
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.12 }}
+          className="space-y-10"
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center">
+            Areas of Expertise
           </h2>
-        </div>
-      </div>    
-      <div>
-        <p>
-          Welcome to my web portfolio, I have a Bachelor in Computer Science and Post-Graduate 
-          certificates in Databases and Cybersecurity, additionally 5+ years experience working
-          as a full-stack developer, database developer, researching and volunteering.
-        </p> <br />
-        <p>
-          I have a passion for problem solving, researching and helping others. Personally I 
-          find this activities very rewarding because helps me to achieve my profesional goals
-          and be up to date with new frameworks, tools and technologies in general.
-        </p> <br />
-      </div>
 
-      <div className="min-w-0 flex-1">
-        <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight mt-10">
-          Education and Studies
-        </h2>
-      </div>
-      <Carousel />
+          <div className="relative">
+            <Carousel />
+          </div>
+        </motion.section>
 
-      {/* <div className="min-w-0 flex-1">
-        <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight my-10">
-          Work Experience
-        </h2>
-      </div>
-      <CardXP /> */}
+        <motion.section
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.18 }}
+          className="space-y-10"
+        >
+          <h2 className="text-2xl sm:text-3xl font-bold text-center">
+            Technical Skills
+          </h2>
 
-      <div className="min-w-0 flex-1">
-        <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight my-10">
-          Technical Skills
-        </h2>
+          <GridTech />
+        </motion.section>
       </div>
-      <GridTech />
-    </div>
+    </PageTransition>
   );
 }

@@ -1,10 +1,31 @@
+'use client';
+
+import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+const footerNav = [
+  { name: "Home", href: "/" },
+  { name: "Certifications", href: "/certifications" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+];
+
+const socialLinks = [
+  { name: "Indeed", href: "https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/edwineras/" },
+  { name: "Github", href: "https://github.com/EdwinEras" },
+];
+
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 rounded-lg shadow m-4">
+    <motion.footer
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
+      className="bg-gray-800 rounded-lg shadow m-4"
+    >
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className="sm:flex sm:items-center sm:justify-between">
           <div
@@ -22,43 +43,26 @@ const Footer = () => {
             </span>
           </div>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
-              <Link href="/" className="hover:underline me-4 md:me-6">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/certifications" className="hover:underline me-4 md:me-6">
-                Certifications
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects" className="hover:underline me-4 md:me-6">
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:underline me-4 md:me-6">
-                Contact
-              </Link>
-            </li>
+            {footerNav.map((item) => (
+              <li key={item.name}>
+                <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+                  <Link href={item.href} className="hover:underline me-4 md:me-6">
+                    {item.name}
+                  </Link>
+                </motion.div>
+              </li>
+            ))}
           </ul>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <li>
-              <Link href="https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-homepage" className="hover:underline me-4 md:me-6">
-                Indeed
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.linkedin.com/in/edwineras/ " className="hover:underline me-4 md:me-6">
-                LinkedIn
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/EdwinEras" className="hover:underline me-4 md:me-6">
-                Github
-              </Link>
-            </li>
+            {socialLinks.map((item) => (
+              <li key={item.name}>
+                <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}>
+                  <Link href={item.href} className="hover:underline me-4 md:me-6">
+                    {item.name}
+                  </Link>
+                </motion.div>
+              </li>
+            ))}
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
@@ -66,7 +70,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Edwin Eras. All rights reserved.
         </span>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
