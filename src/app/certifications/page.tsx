@@ -6,7 +6,13 @@ import content from "../content.json";
 
 export default function Page(){
     const certificates = [...content.certificates]
-    certificates.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    certificates.sort((a, b) => {
+        const [dayA, monthA, yearA] = a.date.split('-').map(Number);
+        const [dayB, monthB, yearB] = b.date.split('-').map(Number);
+        const dateA = new Date(yearA, monthA - 1, dayA).getTime();
+        const dateB = new Date(yearB, monthB - 1, dayB).getTime();
+        return dateB - dateA;
+    });
 
     return (
     <PageTransition>

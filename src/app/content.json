@@ -92,7 +92,10 @@
             "image": "/certificates/comptia_sec+.png", "title": "CompTIA Security+", "date": "22-02-2026"
         },
         {
-            "image": "/certificates/cisco_cybersecurity.png", "title": "Seneca Database Certificate", "date": "22-05-2025"
+            "image": "/certificates/cisco_cybersecurity.png", "title": "Cisco Introduction to Cybersecurity", "date": "22-05-2025"
+        },
+        {
+            "image": "/certificates/cybersecurity_certificate.png", "title": "Seneca Cybersecurity Certificate", "date": "28-04-2026"
         },
         {
             "image": "/certificates/database_certificate.png", "title": "Seneca Database Certificate", "date": "01-04-2025"

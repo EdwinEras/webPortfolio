@@ -52,19 +52,11 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.18 }}
-          className="space-y-10"
-        >
           <h2 className="text-2xl sm:text-3xl font-bold text-center">
             Technical Skills
           </h2>
 
           <GridTech />
-        </motion.section>
       </div>
     </PageTransition>
   );
