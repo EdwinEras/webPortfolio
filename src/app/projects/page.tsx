@@ -1,72 +1,41 @@
-"use client"
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import ListProject from "../components/list_project";
-import PageTransition from "../components/page-transition";
-import axios from "axios";
+import type { Metadata } from "next";
+import { ProjectGrid } from "@/components/projects/project-grid";
+import { RepoList } from "@/components/projects/repo-list";
+import { fetchRepos } from "@/components/projects/repos";
+import { PageHeader } from "@/components/ui/section-heading";
+import { Shell } from "@/components/ui/shell";
+import { projects } from "@/lib/content";
 
-interface Repo {
-    id: number;
-    name: string;
-    html_url: string;
-    updated_at: string;
-    created_at: string;
-    language: string;
-    visibility: string;
+export const metadata: Metadata = {
+  title: "Projects",
+  description:
+    "Selected work in database engineering, full-stack development and security tooling, plus the full public repository list.",
 };
 
-export default function Page(){
-    const [repos, setRepos] = useState([]);
+/**
+ * Two halves, in order of how much they are worth a recruiter's attention: the
+ * four curated projects, then the raw repository list.
+ *
+ * This is an async Server Component — the GitHub request happens during
+ * rendering and its result is cached by `fetchRepos`'s own `revalidate`, so
+ * there is no client-side loading state and no API call from the browser.
+ */
+export default async function ProjectsPage() {
+  const repos = await fetchRepos();
 
-    useEffect(() => {
-        (() => {
-            axios.get("https://api.github.com/users/EdwinEras/repos", {
-                headers: {
-                    Authorization: process.env.GITHUB_AUTH,
-                },
-            })
-            .then((response) => {
-                setRepos(response.data);
-            })
-            .catch((error) => {
-                alert("error fetching data:" + error);
-            });
-        })();
-    }, []);
+  return (
+    <main>
+      <Shell className="py-[clamp(48px,7vw,88px)]">
+        <PageHeader
+          title="Projects"
+          lede="Four pieces of work worth reading about, then everything else on GitHub."
+        />
 
-    return (
-    <PageTransition>
-      <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.06 }}
-          className="lg:flex lg:items-center lg:justify-between"
-        >
-            <div className="min-w-0 flex-1">
-                <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight">
-                    Projects page
-                </h2>
-            </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.14 }}
-          className="size-full my-10"
-        >
-            {repos.map((item:Repo) => (
-                <ListProject key={item.id}
-                    id={item.id}
-                    html_url={item.html_url}
-                    pname={item.name}
-                    updated_at={item.updated_at}
-                    created_at={item.created_at}
-                    language={item.language}
-                    visibility={item.visibility}
-                />
-            ))}
-        </motion.div>
-      </div>
-    </PageTransition>
-)};
+        <ProjectGrid projects={projects} />
+
+        {/* Renders nothing when GitHub is unreachable or rate-limited. */}
+        <RepoList repos={repos} />
+      </Shell>
+    </main>
+  );
+}

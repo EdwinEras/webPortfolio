@@ -2,37 +2,242 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   Nocturne — design-system tokens.
+   Dark is the default ground. The light theme swaps the same tokens, with the
+   tonal ramps inverted so every step keeps its visual value against its own
+   background. Themes are driven by [data-theme] on <html> so the toggle wins
+   over the OS preference once the visitor has chosen.
+   ========================================================================== */
+
 :root {
-  --background: #fff6c8;
-  --foreground: #1a1a1a;
-  --primary: #6366f1;
-  --secondary: #f1f5f9;
-  --border: #e5e7eb;
+  --color-bg: #161826;
+  --color-surface: #232532;
+  --color-text: #e9e9ed;
+  --color-accent: #9184d9;
+  --color-divider: color-mix(in srgb, #e9e9ed 16%, transparent);
+
+  --color-neutral-100: #f3f5fe;
+  --color-neutral-200: #e4e7f5;
+  --color-neutral-300: #cfd3e5;
+  --color-neutral-400: #b2b6ca;
+  --color-neutral-500: #9397ab;
+  --color-neutral-600: #75798c;
+  --color-neutral-700: #595d6c;
+  --color-neutral-800: #3f424d;
+  --color-neutral-900: #292b31;
+
+  --color-accent-100: #f5f4ff;
+  --color-accent-200: #e7e5fe;
+  --color-accent-300: #d2cefd;
+  --color-accent-400: #b5abfc;
+  --color-accent-500: #968ae0;
+  --color-accent-600: #796cbf;
+  --color-accent-700: #5d5294;
+  --color-accent-800: #423a6a;
+  --color-accent-900: #2b2741;
+
+  /* Section grounds — saturated deep indigo bands used at page scale only. */
+  --color-section: #262a60;
+  --color-section-glow: #353b80;
+  --color-section-ghost: #4c5397;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 0 0 1px #3f424d;
+  --shadow-md: 0 0 0 1px #595d6c, 0 6px 18px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 0 0 1px #9397ab, 0 16px 40px rgba(0, 0, 0, 0.65);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #e5e7eb;
-    --primary: #818cf8;
-    --secondary: #1e293b;
-    --border: #334155;
-  }
+:root[data-theme="light"] {
+  /* The base accent is only 2.6:1 on a light ground — deepen it for text use. */
+  --color-accent: color-mix(in oklab, #9184d9 55%, #161826);
+  --color-bg: #e4e7f5;
+  --color-surface: #f3f5fe;
+  --color-text: #292b31;
+  --color-divider: color-mix(in srgb, #292b31 18%, transparent);
+
+  --color-neutral-100: #292b31;
+  --color-neutral-200: #3f424d;
+  --color-neutral-300: #595d6c;
+  --color-neutral-400: #75798c;
+  --color-neutral-500: #9397ab;
+  --color-neutral-600: #b2b6ca;
+  --color-neutral-700: #cfd3e5;
+  --color-neutral-800: #e4e7f5;
+  --color-neutral-900: #f3f5fe;
+
+  --color-accent-100: #2b2741;
+  --color-accent-200: #423a6a;
+  --color-accent-300: #5d5294;
+  --color-accent-400: #796cbf;
+  --color-accent-500: #968ae0;
+  --color-accent-600: #b5abfc;
+  --color-accent-700: #d2cefd;
+  --color-accent-800: #e7e5fe;
+  --color-accent-900: #f5f4ff;
+
+  --color-section: #e7e5fe;
+  --color-section-glow: #f5f4ff;
+  --color-section-ghost: #b5abfc;
+
+  --shadow-sm: 0 0 0 1px #cfd3e5;
+  --shadow-md: 0 0 0 1px #cfd3e5, 0 6px 18px rgba(41, 43, 49, 0.10);
+  --shadow-lg: 0 0 0 1px #b2b6ca, 0 16px 40px rgba(41, 43, 49, 0.16);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 15px;
+  line-height: 1.55;
+  overflow-x: hidden;
 }
 
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.12;
+  letter-spacing: -0.015em;
 }
 
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradientShift 4s ease infinite;
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes snake {
+  to { transform: rotate(1turn); }
+}
+
+@layer components {
+  /* ── IMPORTANT ──────────────────────────────────────────────────────────
+     Tailwind strips any rule in this layer whose class name it cannot find in
+     the scanned source. It scans for *literal* text, so a class assembled at
+     runtime (`action-${variant}`) is invisible to it and its rule will be
+     missing from the build. Always write these names out in full in the TSX —
+     see the lookup maps in `src/components/ui/action-link.tsx`.
+     ──────────────────────────────────────────────────────────────────────── */
+  /* — actions —
+     Outlined buttons on a dark ground. `action-accent` carries the accent glow
+     and is reserved for the primary call to action in any given view. */
+  .action {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md
+           border font-medium leading-none transition-colors duration-200;
+  }
+  .action-md { @apply px-6 py-3.5 text-[15px]; }
+  .action-sm { @apply px-[18px] py-2.5 text-sm; }
+  .action-accent {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    box-shadow: 0 0 30px -8px color-mix(in srgb, var(--color-accent) 70%, transparent);
+  }
+  .action-accent:hover {
+    background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+    color: var(--color-accent-200);
+  }
+  .action-outline {
+    border-color: var(--color-section-ghost);
+    color: var(--color-neutral-100);
+  }
+  .action-outline:hover { border-color: var(--color-accent-400); }
+
+  /* — chips —
+     `chip-accent` is a filled statement of fact (a stack a project uses);
+     `chip-outline` is a quieter label (a technology a role touched). */
+  .chip {
+    @apply inline-flex items-center rounded-full px-[11px] py-[5px] text-xs;
+  }
+  .chip-accent {
+    background: var(--color-accent-900);
+    color: var(--color-accent-200);
+  }
+  .chip-outline {
+    border: 1px solid var(--color-neutral-800);
+    color: var(--color-neutral-300);
+  }
+
+  /* — surfaces — */
+  .panel {
+    @apply rounded-lg border;
+    border-color: var(--color-neutral-800);
+    background: var(--color-surface);
+  }
+
+  /* — forms — */
+  .field-label {
+    @apply flex flex-col gap-2 text-[13px];
+    color: var(--color-neutral-400);
+  }
+  .field-input {
+    @apply w-full rounded-md border px-3.5 py-3 text-[15px] transition-colors duration-200;
+    border-color: var(--color-neutral-800);
+    background: var(--color-bg);
+    color: var(--color-text);
+    caret-color: var(--color-accent);
+  }
+  .field-input:hover { border-color: var(--color-neutral-600); }
+  .field-input:focus-visible {
+    border-color: var(--color-accent);
+    outline-offset: 0;
+  }
+
+  /* — eyebrow labels above a section or card — */
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.1em];
+  }
+
+  /* A rule that fades to transparent at both ends over one 48px baseline unit
+     — the Nocturne signature separator. */
+  .rule-fade {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-divider) 48px,
+      var(--color-divider) calc(100% - 48px),
+      transparent
+    );
+  }
+
+  /* Rotating conic highlight that traces a card's 1.5px border on hover. */
+  .snake-ring {
+    position: absolute;
+    inset: -50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 280ms ease;
+    animation: snake 2.6s linear infinite;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0 62%,
+      var(--color-accent-500) 78%,
+      var(--color-accent-200) 88%,
+      var(--color-accent-500) 94%,
+      transparent 100%
+    );
+  }
+
+  .group:hover .snake-ring { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .snake-ring,
+  [class*="animate-"] {
+    animation: none !important;
+  }
 }
