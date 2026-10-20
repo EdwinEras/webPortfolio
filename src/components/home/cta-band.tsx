@@ -9,7 +9,7 @@ export function CtaBand() {
       <div className="mx-auto max-w-[900px] px-4 py-[clamp(60px,9vw,112px)] text-center sm:px-6 lg:px-7">
         <Reveal>
           <h2 className="mb-5 text-[clamp(32px,5.6vw,58px)] font-semibold leading-[1.05] tracking-[-0.035em]">
-            Let&apos;s talk this week
+            Let&apos;s work together
           </h2>
         </Reveal>
         <p className="mx-auto mb-8 max-w-[42ch] text-[clamp(16px,1.6vw,19px)] text-accent-200">

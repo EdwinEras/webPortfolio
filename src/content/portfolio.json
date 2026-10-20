@@ -201,6 +201,11 @@
   ],
   "certificates": [
     {
+      "image": "/certificates/microsoft-sc-900.png",
+      "title": "Microsoft SC 900",
+      "date": "04-10-2026"
+    },
+    {
       "image": "/certificates/cybersecurity_certificate.png",
       "title": "Seneca Cybersecurity Certificate",
       "date": "28-04-2026"
