@@ -1,51 +1,43 @@
-'use client';
-import { motion } from "framer-motion";
-import ContactForm from "../components/contact-form";
-import ContactIcon from "../components/contact-icon";
-import PageTransition from "../components/page-transition";
-import content from "../content.json";
+import type { Metadata } from "next";
+import { ContactForm } from "@/components/contact/contact-form";
+import { ContactLinks } from "@/components/contact/contact-links";
+import { PageHeader } from "@/components/ui/section-heading";
+import { Shell } from "@/components/ui/shell";
+import { contacts, profile } from "@/lib/content";
 
-export default function Page(){
-    return (
-    <PageTransition>
-      <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.06 }}
-          className="lg:flex lg:items-center lg:justify-between"
-        >
-            <div className="min-w-0 flex-1">
-                <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight">
-                    Contact page
-                </h2>
-            </div>
-        </motion.div>
+export const metadata: Metadata = {
+  title: "Contact",
+  description: `Get in touch with ${profile.name} — ${profile.location}, available now.`,
+};
 
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.12 }}
-          className="my-10 grid grid-cols-2 gap-3 sm:grid-cols-4"
-        >
-            {content.contacts.map((item, index)=>(
-                <ContactIcon key={index}
-                name={item.name}
-                image={item.image}
-                color={item.color}
-                href={item.href}
-            />
-            ))}
-        </motion.div>
-       
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.18 }}
-          className="w-full"
-        >
-          <ContactForm />
-        </motion.div>
-      </div>
-    </PageTransition>
-)};
+/**
+ * Location and availability are read from the profile rather than written out
+ * again here, so "available now" cannot go stale on this page while the hero
+ * and the footer say something else.
+ */
+const LEDE = `${profile.location} · ${profile.availability.toLowerCase()} · replies the same day.`;
+
+export default function ContactPage() {
+  return (
+    <main>
+      <Shell className="py-[clamp(48px,7vw,88px)]">
+        <PageHeader title="Contact" lede={LEDE} />
+
+        {/*
+          Two columns that wrap rather than a grid with a breakpoint: the basis
+          values decide when there is room for both, so the form drops below the
+          links exactly when it would otherwise be too narrow to type in.
+        */}
+        <div className="flex flex-wrap items-start gap-9">
+          <div className="min-w-0 flex-[1_1_260px]">
+            <ContactLinks contacts={contacts} />
+          </div>
+
+          <div className="min-w-0 flex-[1_1_340px]">
+            <ContactForm />
+          </div>
+        </div>
+      </Shell>
+    </main>
+  );
+}

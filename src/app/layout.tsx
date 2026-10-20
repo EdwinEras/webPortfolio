@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import Navigation from "./components/navigation";
-import Footer from "./components/footer";
+import { Inter } from "next/font/google";
+import Navigation from "@/components/layout/navigation";
+import Footer from "@/components/layout/footer";
+import { profile } from "@/lib/content";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "web portfolio",
-  description: "Edwin Eras professional web portfolio",
+  title: {
+    default: `${profile.name} — ${profile.headline}`,
+    template: `%s — ${profile.name}`,
+  },
+  description: profile.summary,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    // `suppressHydrationWarning`: the init script below sets `data-theme`
+    // before React hydrates, so the server's markup will not match.
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <Navigation />
         {children}
         <Footer />

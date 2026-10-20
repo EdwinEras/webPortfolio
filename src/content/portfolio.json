@@ -1,0 +1,351 @@
+{
+  "profile": {
+    "name": "Edwin Eras",
+    "initials": "EE",
+    "headline": "Full-stack developer & cybersecurity analyst",
+    "location": "Toronto, Ontario",
+    "availability": "Available now",
+    "summary": "Five years building and securing production systems. Led a company-wide financial database migration, shipped a school platform used by 504 institutions, delivered full-stack work for 19 brands.",
+    "bio": "Full-stack developer and cybersecurity analyst in Toronto, Ontario, Canada.",
+    "photo": "/myphoto.jpg",
+    "resume": "/EdwinEras_Resume.pdf",
+    "githubUser": "EdwinEras"
+  },
+  "stats": [
+    {
+      "value": "5+",
+      "label": "Years shipping production software"
+    },
+    {
+      "value": "504",
+      "label": "Schools on a platform I built"
+    },
+    {
+      "value": "19",
+      "label": "Brands shipped full-stack work for"
+    },
+    {
+      "value": "13",
+      "label": "Certifications, incl. Security+"
+    }
+  ],
+  "expertise": [
+    {
+      "step": "01",
+      "verb": "Build",
+      "title": "Full-stack development",
+      "description": "End-to-end web and mobile products. React and Angular front ends on Spring, Node and Django services, with payment and LMS integrations.",
+      "image": "/computer_science.jpg",
+      "tags": [
+        "React",
+        "Angular",
+        "Node",
+        "Flutter"
+      ]
+    },
+    {
+      "step": "02",
+      "verb": "Scale",
+      "title": "Databases",
+      "description": "Schema design, query optimization and warehousing on Oracle, PostgreSQL and SQL Server. Led a full financial-system migration end to end.",
+      "image": "/database_developer.jpg",
+      "tags": [
+        "OracleDB",
+        "PostgreSQL",
+        "OLTP / OLAP"
+      ]
+    },
+    {
+      "step": "03",
+      "verb": "Secure",
+      "title": "Cybersecurity",
+      "description": "Network security, risk assessment, security auditing and log analysis. CompTIA Security+ and a Seneca postgraduate certificate.",
+      "image": "/cybersecurity.jpg",
+      "tags": [
+        "Security+",
+        "Auditing",
+        "Log analysis"
+      ]
+    }
+  ],
+  "tech": [
+    {
+      "name": "Python",
+      "image": "/tech/python.png"
+    },
+    {
+      "name": "Java",
+      "image": "/tech/java.png"
+    },
+    {
+      "name": "JavaScript",
+      "image": "/tech/javascript.png"
+    },
+    {
+      "name": "TypeScript",
+      "image": "/tech/typescript.png"
+    },
+    {
+      "name": "C++",
+      "image": "/tech/c1_logo.png"
+    },
+    {
+      "name": "OracleDB",
+      "image": "/tech/oracle.png"
+    },
+    {
+      "name": "PostgreSQL",
+      "image": "/tech/postgresql.png"
+    },
+    {
+      "name": "SQL Server",
+      "image": "/tech/sqlserver.png"
+    },
+    {
+      "name": "MySQL",
+      "image": "/tech/mysql.png"
+    },
+    {
+      "name": "MongoDB",
+      "image": "/tech/mongodb.png"
+    },
+    {
+      "name": "ReactJS",
+      "image": "/tech/reactjs.png"
+    },
+    {
+      "name": "Angular",
+      "image": "/tech/angular.png"
+    },
+    {
+      "name": "Spring",
+      "image": "/tech/spring.png"
+    },
+    {
+      "name": "NodeJS",
+      "image": "/tech/node.png"
+    },
+    {
+      "name": "Django",
+      "image": "/tech/django.png"
+    },
+    {
+      "name": "Git",
+      "image": "/tech/git.png"
+    },
+    {
+      "name": "Postman",
+      "image": "/tech/postman.png"
+    },
+    {
+      "name": "Docker",
+      "image": "/tech/docker.png"
+    },
+    {
+      "name": "Linux",
+      "image": "/tech/linux.png"
+    },
+    {
+      "name": "HTML / CSS",
+      "image": "/tech/html.png"
+    }
+  ],
+  "experience": [
+    {
+      "company": "CREDIMATIC SA",
+      "role": "System Technician Programmer",
+      "duration": "Sep 2023 — Feb 2024",
+      "technologies": [
+        "Cobol",
+        "Java",
+        "OracleSQL"
+      ],
+      "description": [
+        "Led the migration of the company's financial databases and software functionalities to a new company infrastructure, ensuring security, data integrity, and seamless integration with existing systems.",
+        "Created and updated comprehensive software manuals, ensuring clear communication of technical processes for daily operations, and enhancing user understanding of system functionalities.",
+        "Designed complex pipelines using Linux bash script commands to make the compilation and build process faster, optimizing the integration of new software to the system."
+      ]
+    },
+    {
+      "company": "SCHLUMBERGER SA",
+      "role": "Android Application Developer",
+      "duration": "Feb 2023 — Jul 2023",
+      "technologies": [
+        "Java",
+        "Ruby on Rails",
+        "Flutter",
+        "MySQL"
+      ],
+      "description": [
+        "Implemented school webapp for over 504 Ecuadorian schools, focusing on responsive design, user-friendly navigation, and enhancing overall user experience for students, parents, and staff.",
+        "Front-end and mobile development using web technologies to facilitate posting and managing of homework and online-classes, prioritizing network traffic and minimizing delays.",
+        "Used Canvas LMS REST API with AJAX to create single page dashboards for students and professors without reloading the pages, ensuring a fast update and smoother experience."
+      ]
+    },
+    {
+      "company": "HANGAROA SA",
+      "role": "Full Stack Developer",
+      "duration": "Feb 2021 — Apr 2022",
+      "technologies": [
+        "React Native",
+        "Ionic",
+        "Bootstrap",
+        "PostgreSQL"
+      ],
+      "description": [
+        "Content creation to provide digital marketing services and manage social media content for Ecuadorian companies, optimizing user experience and increasing online visibility for 19 local brands.",
+        "Development and maintenance of an end-to-end website and Android application, utilizing both front-end and back-end technologies, ensuring a seamless user experience and robust functionality.",
+        "Used Paymentez API for online payments, establishing a secure connection and giving feedback of each stage of the payment until the transaction was completed."
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "image": "/certificates/microsoft-sc-900.png",
+      "title": "Microsoft SC 900",
+      "date": "04-10-2026"
+    },
+    {
+      "image": "/certificates/cybersecurity_certificate.png",
+      "title": "Seneca Cybersecurity Certificate",
+      "date": "28-04-2026"
+    },
+    {
+      "image": "/certificates/comptia_sec+.png",
+      "title": "CompTIA Security+",
+      "date": "22-02-2026"
+    },
+    {
+      "image": "/certificates/president_honour_cyt.png",
+      "title": "President's Honour List — CYT",
+      "date": "01-08-2025"
+    },
+    {
+      "image": "/certificates/cisco_cybersecurity.png",
+      "title": "Cisco Introduction to Cybersecurity",
+      "date": "22-05-2025"
+    },
+    {
+      "image": "/certificates/database_certificate.png",
+      "title": "Seneca Database Certificate",
+      "date": "01-04-2025"
+    },
+    {
+      "image": "/certificates/hackathon_seneca.png",
+      "title": "Seneca Hackathon",
+      "date": "01-03-2025"
+    },
+    {
+      "image": "/certificates/president_honour_dad.png",
+      "title": "President's Honour List — DAD",
+      "date": "01-12-2024"
+    },
+    {
+      "image": "/certificates/academic_research.png",
+      "title": "Academic Research",
+      "date": "01-08-2024"
+    },
+    {
+      "image": "/certificates/linux_bash.png",
+      "title": "Linux Bash Shell Scripting",
+      "date": "01-12-2023"
+    },
+    {
+      "image": "/certificates/computer_science.png",
+      "title": "Bachelor of Computer Science",
+      "date": "01-10-2023"
+    },
+    {
+      "image": "/certificates/r_statistics.png",
+      "title": "R for Research",
+      "date": "01-01-2022"
+    },
+    {
+      "image": "/certificates/cisco.png",
+      "title": "Cisco Network Introduction",
+      "date": "01-02-2021"
+    },
+    {
+      "image": "/certificates/java_foundations.png",
+      "title": "Java Foundations",
+      "date": "01-01-2020"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Financial database migration",
+      "kind": "Database engineering",
+      "image": "/database_developer.jpg",
+      "url": null,
+      "stack": [
+        "OracleSQL",
+        "Cobol",
+        "Bash"
+      ],
+      "description": "Led the migration of a company's financial databases and software functionality onto new infrastructure, ensuring security, data integrity and seamless integration with the existing systems."
+    },
+    {
+      "name": "School platform for 504 schools",
+      "kind": "Full-stack + mobile",
+      "image": "/computer_science.jpg",
+      "url": null,
+      "stack": [
+        "Java",
+        "Ruby on Rails",
+        "Flutter",
+        "MySQL"
+      ],
+      "description": "Responsive web and Android app for homework, online classes and dashboards, built against an LMS REST API with single-page updates to keep it fast on weak connections."
+    },
+    {
+      "name": "Log analysis toolkit",
+      "kind": "Security tooling",
+      "image": "/cybersecurity.jpg",
+      "url": null,
+      "stack": [
+        "Python",
+        "Linux",
+        "Docker"
+      ],
+      "description": "Parses and correlates system and network logs to surface anomalies, built while studying for Security+ and used on my own homelab network."
+    },
+    {
+      "name": "webPortfolio",
+      "kind": "Front-end",
+      "image": "/computer_science.jpg",
+      "url": "https://github.com/EdwinEras/webPortfolio",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind"
+      ],
+      "description": "This site — Next.js App Router, content driven from a single JSON file, deployed on Vercel."
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Phone / SMS",
+      "image": "/phone.png",
+      "href": "sms:+14378290725",
+      "detail": "+1 437 829 0725"
+    },
+    {
+      "name": "LinkedIn",
+      "image": "/linkedin.png",
+      "href": "https://www.linkedin.com/in/edwineras/",
+      "detail": "in/edwineras"
+    },
+    {
+      "name": "GitHub",
+      "image": "/github.png",
+      "href": "https://github.com/EdwinEras",
+      "detail": "EdwinEras"
+    },
+    {
+      "name": "ResearchGate",
+      "image": "/researchgate.png",
+      "href": "https://www.researchgate.net/profile/Edwin-Eras-Zamora",
+      "detail": "Publications"
+    }
+  ]
+}

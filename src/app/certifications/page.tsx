@@ -1,50 +1,34 @@
-'use client';
-import { motion } from "framer-motion";
-import Card from "../components/card";
-import PageTransition from "../components/page-transition";
-import content from "../content.json";
+import type { Metadata } from "next";
+import { certificateCount, certificates } from "@/lib/content";
+import { CertificateGrid } from "@/components/certifications/certificate-grid";
+import { PageHeader } from "@/components/ui/section-heading";
+import { Shell } from "@/components/ui/shell";
 
-export default function Page(){
-    const certificates = [...content.certificates]
-    certificates.sort((a, b) => {
-        const [dayA, monthA, yearA] = a.date.split('-').map(Number);
-        const [dayB, monthB, yearB] = b.date.split('-').map(Number);
-        const dateA = new Date(yearA, monthA - 1, dayA).getTime();
-        const dateB = new Date(yearB, monthB - 1, dayB).getTime();
-        return dateB - dateA;
-    });
-
-    return (
-    <PageTransition>
-      <div className="items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, delay: 0.06 }}
-          className="lg:flex lg:items-center lg:justify-between"
-        >
-            <div className="min-w-0 flex-1">
-                <h2 className="text-2xl/7 font-bold sm:truncate sm:text-3xl sm:tracking-tight">
-                    Certifications page
-                </h2>
-            </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.14 }}
-          className="size-full my-10"
-        >
-            <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
-                {certificates.map((item, index) => (
-                    <Card key={index}
-                        title={item.title}
-                        image={item.image}
-                    />
-                ))}
-            </div>
-        </motion.div>
-      </div>
-    </PageTransition>
-    );
+export const metadata: Metadata = {
+  title: "Certifications",
+  description: `${certificateCount} credentials in software engineering, databases and cybersecurity.`,
 };
+
+const NUMBER_WORDS = [
+  "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven",
+  "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen",
+];
+
+/** Reads as prose when the count is small; falls back to digits past the list. */
+function spellCount(count: number): string {
+  return NUMBER_WORDS[count] ?? String(count);
+}
+
+export default function CertificationsPage() {
+  return (
+    <main>
+      <Shell className="py-[clamp(48px,7vw,88px)]">
+        <PageHeader
+          title="Certifications"
+          lede={`${spellCount(certificateCount)} credentials, newest first.`}
+        />
+        <CertificateGrid certificates={certificates} />
+      </Shell>
+    </main>
+  );
+}
