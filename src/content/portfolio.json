@@ -2,11 +2,11 @@
   "profile": {
     "name": "Edwin Eras",
     "initials": "EE",
-    "headline": "Full-stack developer & cybersecurity analyst",
+    "headline": "Software Developer. Delivering secure and reliable systems",
     "location": "Toronto, Ontario",
     "availability": "Available now",
     "summary": "Five years building and securing production systems. Led a company-wide financial database migration, shipped a school platform used by 504 institutions, delivered full-stack work for 19 brands.",
-    "bio": "Full-stack developer and cybersecurity analyst in Toronto, Ontario, Canada.",
+    "bio": "Software developer and cybersecurity analyst in Toronto, Ontario, Canada.",
     "photo": "/myphoto.jpg",
     "resume": "/EdwinEras_Resume.pdf",
     "githubUser": "EdwinEras"
@@ -152,24 +152,24 @@
   ],
   "experience": [
     {
-      "company": "CREDIMATIC SA",
-      "role": "System Technician Programmer",
-      "duration": "Sep 2023 — Feb 2024",
+      "company": "Ai Financial",
+      "role": "Senior Software Developer",
+      "duration": "Jan 2026 — Oct 2026",
       "technologies": [
         "Cobol",
         "Java",
         "OracleSQL"
       ],
       "description": [
-        "Led the migration of the company's financial databases and software functionalities to a new company infrastructure, ensuring security, data integrity, and seamless integration with existing systems.",
-        "Created and updated comprehensive software manuals, ensuring clear communication of technical processes for daily operations, and enhancing user understanding of system functionalities.",
-        "Designed complex pipelines using Linux bash script commands to make the compilation and build process faster, optimizing the integration of new software to the system."
+        "Led the architecture of a secure investment data platform using Java, Spring Boot, React, and REST APIs, improving data discovery and reducing portfolio processing time by 65%.",
+        "Introduced event-driven microservices, automated testing, CI/CD, and observability to address scalability risks, increasing deployment reliability and reducing production incidents by 53%",
+        "Built Docker-based CI/CD pipelines with automated integration tests and production monitoring, shortening release cycles by 33% and improving service resilience."
       ]
     },
     {
-      "company": "SCHLUMBERGER SA",
-      "role": "Android Application Developer",
-      "duration": "Feb 2023 — Jul 2023",
+      "company": "Credimatic Minsait",
+      "role": "System Technician Programmer",
+      "duration": "Sept 2023 — Feb 2024",
       "technologies": [
         "Java",
         "Ruby on Rails",
@@ -177,15 +177,15 @@
         "MySQL"
       ],
       "description": [
-        "Implemented school webapp for over 504 Ecuadorian schools, focusing on responsive design, user-friendly navigation, and enhancing overall user experience for students, parents, and staff.",
-        "Front-end and mobile development using web technologies to facilitate posting and managing of homework and online-classes, prioritizing network traffic and minimizing delays.",
-        "Used Canvas LMS REST API with AJAX to create single page dashboards for students and professors without reloading the pages, ensuring a fast update and smoother experience."
+        "Migrated financial processing services with Java, Spring Boot, and Oracle SQL, automating validation workflows and reducing manual reconciliation effort by 40%.",
+        "Implemented role-based access controls, audit logging, data-quality checks, and lineage tracking to meet governance requirements and improve traceability across regulated datasets.",
+        "Directed design reviews and mentored engineers on domain-driven design, API security, and performance optimization, accelerating delivery by 25% while strengthening engineering standards."
       ]
     },
     {
-      "company": "HANGAROA SA",
-      "role": "Full Stack Developer",
-      "duration": "Feb 2021 — Apr 2022",
+      "company": "Schlumberger SA",
+      "role": "Mobile Application Developer",
+      "duration": "Feb 2023 — Jul 2023",
       "technologies": [
         "React Native",
         "Ionic",
@@ -193,9 +193,9 @@
         "PostgreSQL"
       ],
       "description": [
-        "Content creation to provide digital marketing services and manage social media content for Ecuadorian companies, optimizing user experience and increasing online visibility for 19 local brands.",
-        "Development and maintenance of an end-to-end website and Android application, utilizing both front-end and back-end technologies, ensuring a seamless user experience and robust functionality.",
-        "Used Paymentez API for online payments, establishing a secure connection and giving feedback of each stage of the payment until the transaction was completed."
+        "Developed responsive mobile and web experiences with TypeScript, React, and reusable components, enabling field teams to securely capture operational data and improving completion rates by 25%.",
+        "Integrated mobile applications with versioned REST APIs and event-driven services, adding resilient synchronization that maintained reliable operations in low-connectivity environments.",
+        "Partnered with product, security, and field stakeholders to translate operational requirements into scalable solutions, improving application performance and reducing user-reported issues by 20%."
       ]
     }
   ],
